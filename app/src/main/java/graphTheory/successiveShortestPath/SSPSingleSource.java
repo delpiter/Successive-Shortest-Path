@@ -62,9 +62,9 @@ public class SSPSingleSource implements SuccessiveShortestPath {
                     this.graph.getNodes().forEach(n -> {
                         n.updatePotential();
                     });
-                    System.out.println("Original Balance: " + source.getBalance());
+                    // System.out.println("Original Balance: " + source.getBalance());
                     updateResidualGraph(source, endNode.get());
-                    System.out.println("Updated Balance: " + source.getBalance());
+                    // System.out.println("Updated Balance: " + source.getBalance());
                     if (source.getBalance() != 0)
                         this.suppliers.add(source);
                 } else
@@ -116,7 +116,7 @@ public class SSPSingleSource implements SuccessiveShortestPath {
      */
     private void recursiveUpdate(final Node n, final int flow) {
         if (!n.getPredecessor().isEmpty()) {
-            System.err.println("Node: " + n + ", predecessor: " + n.getPredecessor());
+            // System.err.println("Node: " + n + ", predecessor: " + n.getPredecessor());
             Edge e = n.getPredecessor()
                     .get()
                     .getEdges()

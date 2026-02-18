@@ -15,11 +15,14 @@ public class App {
     public static void main(String[] args) {
         try {
             Graph g = Reader.readFromFile("input.in");
-            // System.out.println(g);
             SuccessiveShortestPath ssp = new SSPSingleSource(g);
             ssp.run();
 
-            System.out.println(ssp);
+            // System.out.println(ssp);
+            g.getNodes().forEach(n -> {
+                System.out.println("Node " + n.getNodeId() + ": " + n.getEdges());
+            });
+
         } catch (IOException e) {
             System.err.println("Error reading file: " + e.getMessage());
             e.printStackTrace();

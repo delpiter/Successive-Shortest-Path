@@ -18,7 +18,6 @@ public class DijkstraSingleSource implements ShortestPathAlgorithm {
     }
 
     private void initializeSingleSource(final Graph g, final Node source) {
-        System.err.println("WTF");
         heap.clear();
         g.getNodes().forEach(node -> {
             node.reset();
@@ -31,7 +30,7 @@ public class DijkstraSingleSource implements ShortestPathAlgorithm {
     public void run(final Graph g, final Node source) {
         initializeSingleSource(g, source);
         // System.err.println("----------INITIALIZED DIJKSTRA-----------");
-        System.err.println(heap);
+        // System.err.println(heap);
         while (!heap.isEmpty()) {
             Node u = heap.poll();
             // System.err.println("EXPLORING NODE: " + u.getNodeId());
