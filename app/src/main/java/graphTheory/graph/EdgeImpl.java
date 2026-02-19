@@ -32,6 +32,6 @@ public class EdgeImpl implements Edge {
 
     @Override
     public String toString() {
-        return "{" + cost + ", " + flow + "}";
+        return "(" + cost + ", " + flow + ")";
     }
 }

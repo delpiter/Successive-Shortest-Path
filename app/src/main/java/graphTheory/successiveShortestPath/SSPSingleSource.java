@@ -134,6 +134,6 @@ public class SSPSingleSource implements SuccessiveShortestPath {
 
     @Override
     public String toString() {
-        return this.graph.toString() + "\n Conclusions: " + this.conclusions;
+        return this.graph.toString() + "\nConclusions: " + this.conclusions;
     }
 }

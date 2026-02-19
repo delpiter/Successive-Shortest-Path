@@ -43,7 +43,12 @@ public class GraphImpl implements Graph {
 
     @Override
     public String toString() {
-        return "Nodes: " + this.graph.nodes() + "\n Edges" + this.graph.edges();
+        StringBuilder out = new StringBuilder();
+        this.getNodes().forEach(n -> {
+            out.append("Node " + n.getNodeId() + ": " + n.getEdges().toString() + "\n");
+        });
+        return out.toString();
+        // "Nodes: " + this.graph.nodes() + "\n Edges" + this.graph.edges();
     }
 
     @Override
