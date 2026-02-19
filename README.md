@@ -120,6 +120,3 @@ Dove:
 A differenza di come descritto in precedenza, l'algoritmo implementato ***non definisce un insieme di nodi*** $D$.
 
 > Di conseguenza durante l'iterazione, non viene scelto un nodo destinazione $l\in D$, ma solamente un nodo di partenza per il flusso, il nodo di destinazione viene scelto una volta calcolato l'albero dei cammini minimi, scegliendo il nodo finale che *ammette un flusso più alto*.
-## Autore
-
-Implementazione realizzata come parte del corso di Ricerca Operativa.
