@@ -77,7 +77,7 @@ Dove:
   - $n$ = numero di nodi
   - Il termine $(m + n\log(n))$ deriva dall'esecuzione di Dijkstra
 
->[!info] Tipo
+>[!note] Tipo
 >Algoritmo pseudo-polinomiale (dipende dal valore di $U$, non solo dalla dimensione del grafo)
 
 ## Struttura del Progetto
