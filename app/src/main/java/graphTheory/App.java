@@ -26,7 +26,7 @@ public class App {
             };
 
             for (String file : inputFiles) {
-                System.out.println("--------- SOLVING test input1 --------------");
+                System.out.println("--------- SOLVING test " + file + " --------------");
                 Graph g = Reader.readFromFile(file);
                 SuccessiveShortestPath ssp = new SSPSingleSource(g);
                 ssp.run();
