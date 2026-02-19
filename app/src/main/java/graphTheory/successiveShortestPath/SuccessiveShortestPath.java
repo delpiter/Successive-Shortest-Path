@@ -12,4 +12,11 @@ public interface SuccessiveShortestPath {
      * @return a boolean.
      */
     public boolean checkAlgorithmEnd();
+
+    /**
+     * Returns a string containing a readable format for the solution
+     * 
+     * @return
+     */
+    public String solutionToString();
 }

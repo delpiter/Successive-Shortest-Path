@@ -78,4 +78,10 @@ public class SSPMultipleSource implements SuccessiveShortestPath {
         }
         return recursivePathClimb(n);
     }
+
+    @Override
+    public String solutionToString() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'solutionToString'");
+    }
 }

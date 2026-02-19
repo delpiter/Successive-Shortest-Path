@@ -16,13 +16,13 @@ public class App {
         try {
             String[] inputFiles = new String[] {
                     "input1.in",
-                    "input2.in",
-                    "input3.in",
-                    "input4.in",
-                    "input5.in",
-                    "input6.in",
-                    "inputFail1.in", // Disconnected Graph
-                    "inputFail2.in" // Insufficient Capacity Path
+                    // "input2.in",
+                    // "input3.in",
+                    // "input4.in",
+                    // "input5.in",
+                    // "input6.in",
+                    // "inputFail1.in", // Disconnected Graph
+                    // "inputFail2.in" // Insufficient Capacity Path
             };
 
             for (String file : inputFiles) {
@@ -32,6 +32,7 @@ public class App {
                 ssp.run();
 
                 System.out.println(ssp);
+                System.out.println(ssp.solutionToString());
             }
 
         } catch (IOException e) {

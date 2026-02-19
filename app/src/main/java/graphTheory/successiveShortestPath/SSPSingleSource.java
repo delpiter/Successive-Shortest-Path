@@ -134,6 +134,21 @@ public class SSPSingleSource implements SuccessiveShortestPath {
 
     @Override
     public String toString() {
-        return this.graph.toString() + "\nConclusions: " + this.conclusions;
+        return "Conclusions: " + this.conclusions + "\n--------- Final Graph -----------\n" + this.graph.toString();
+    }
+
+    @Override
+    public String solutionToString() {
+        StringBuilder solution = new StringBuilder();
+        this.graph.getNodes().forEach(n -> {
+            // solution.append("From node " + n.getNodeId() + " to:\n");
+            n.getEdges().forEach(ep -> {
+                if (ep.value().getCost() < 0 && ep.value().getFlow() > 0) {
+                    solution.append("From node " + ep.destination().getNodeId()
+                            + " to node:" + n.getNodeId() + " => Flow: " + ep.value().getFlow() + "\n");
+                }
+            });
+        });
+        return solution.toString();
     }
 }
