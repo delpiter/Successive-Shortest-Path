@@ -14,11 +14,25 @@ import graphTheory.successiveShortestPath.SuccessiveShortestPath;
 public class App {
     public static void main(String[] args) {
         try {
-            Graph g = Reader.readFromFile("input.in");
-            SuccessiveShortestPath ssp = new SSPSingleSource(g);
-            ssp.run();
+            String[] inputFiles = new String[] {
+                    "input1.in",
+                    "input2.in",
+                    "input3.in",
+                    "input4.in",
+                    "input5.in",
+                    "input6.in",
+                    "inputFail1.in", // Disconnected Graph
+                    "inputFail2.in" // Insufficient Capacity Path
+            };
 
-            System.out.println(ssp);
+            for (String file : inputFiles) {
+                System.out.println("--------- SOLVING test input1 --------------");
+                Graph g = Reader.readFromFile(file);
+                SuccessiveShortestPath ssp = new SSPSingleSource(g);
+                ssp.run();
+
+                System.out.println(ssp);
+            }
 
         } catch (IOException e) {
             System.err.println("Error reading file: " + e.getMessage());
