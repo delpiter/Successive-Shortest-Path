@@ -11,12 +11,11 @@ L'algoritmo ***Successive Shortest Path*** (`SSP`) risolve il problema di flusso
 Dato un grafo diretto $G=(N,A)$ dove:
 - Ogni nodo $i\in N$ ha uno sbilanciamento $b_{i}$ (**supply** se positivo, **demand** se negativo).
 - Ogni arco $(i,j)\in A$ ha un costo unitario $c_{ij}$ e una capacità $u_{ij}$.
-- Vale il vincolo di bilanciamento: $\displaystyle\sum_{(i\in N)} b_{i}= 0$.
+- Vale il vincolo di bilanciamento: <br>
+$\displaystyle\sum_{(i\in N)} b_{i}= 0$
 
-L'obiettivo è trovare un flusso $x$ che ***minimizzi il costo totale***:
-$$
-\min z = \sum_{(i,j)\in A} c_{ij} \cdot x_{ij}
-$$
+L'obiettivo è trovare un flusso $x$ che ***minimizzi il costo totale***: <br>
+$\min z = \displaystyle\sum_{(i,j)\in A} c_{ij} \cdot x_{ij}$ <br>
 rispettando:
 - Vincoli di capacità: $0\leq x_{ij} \leq u_{ij}$.
 - Vincoli di conservazione del flusso in ogni nodo.
@@ -32,11 +31,9 @@ L'algoritmo opera iterativamente:
    - Invia il massimo flusso possibile lungo questo cammino.
    - Aggiorna il grafo residuo e i potenziali.
 
-3. **Costi Ridotti**: Per gestire gli archi con costo negativo nel grafo residuo, l'algoritmo utilizza i costi ridotti:
-$$
-c_{ij}^{\pi} = c_{ij} - \pi_{i} + \pi_{j}
-$$
-   dove $\pi$ sono i ***potenziali dei nodi***, aggiornati ad ogni iterazione per mantenere i *costi ridotti non-negativi*.
+3. **Costi Ridotti**: Per gestire gli archi con costo negativo nel grafo residuo, l'algoritmo utilizza i costi ridotti: <br>
+$c_{ij}^{\pi} = c_{ij} - \pi_{i} + \pi_{j}$ <br>
+dove $\pi$ sono i ***potenziali dei nodi***, aggiornati ad ogni iterazione per mantenere i *costi ridotti non-negativi*.
 ## Formato di Input
 
 Il file di input deve seguire questo formato:
