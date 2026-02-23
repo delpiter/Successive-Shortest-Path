@@ -68,8 +68,8 @@ Dove:
 
 ## Complessità
 
-- **Complessità temporale**: $O(U\cdot (m + n\log(n)))$ dove:
-  - $U$ = flusso totale da instradare
+- **Complessità temporale**: $O(nU\cdot (m + n\log(n)))$ dove:
+  - $U$ = capacità massima degli archi
   - $m$ = numero di archi
   - $n$ = numero di nodi
   - Il termine $(m + n\log(n))$ deriva dall'esecuzione di Dijkstra
